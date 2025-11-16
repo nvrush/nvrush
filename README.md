@@ -10,21 +10,23 @@
 
 ## ✨ Why NvRush?
 
-NvRush delivers the perfect balance between functionality and minimalism:
+NvRush delivers the perfect balance between functionality and minimalism with a crystal-clear structure:
 
-- ⚡ **Blazing Fast** — Lightning-quick startup and response times
-- 🪶 **Featherweight** — Only ~6MB, incredibly light on resources
-- 🎯 **Efficient Like IDEs** — Modern features without the heavyweight baggage
-- ✏️ **Fully Integrated Editing** — Seamless workflow from start to finish
-- 🔄 **Workflow Made Easy** — Optimized keybindings and smart defaults
-- 🎨 **Beautiful Themes** — Eye-catching UI powered by Lua
-- 🔌 **Offline First** — No internet required, complete privacy guaranteed
-- 🛠️ **Pre-configured** — Ready to use out of the box, zero hassle
-- 🧠 **Smart & Intuitive** — Learn once, productive forever
-- 🔧 **Highly Customizable** — Bend it to your will with simple Lua configs
+- ⚡ **Blazing Fast** — Lightning-quick startup and response times with optimized lazy-loading via `lazy-lock.json`
+- 🪶 **Featherweight** — Only ~6MB, incredibly light on resources with zero bloat
+- 🎯 **Efficient Like IDEs** — Full LSP batch (`LspBatch/`) with completion, formatting, and debugging without the heavyweight baggage
+- ✏️ **Fully Integrated Editing** — Complete IDE features (`IdeBatch/`) including Harpoon, Telescope, refactoring tools, and session management
+- 🔄 **Workflow Made Easy** — Organized `Basics/` folder with clear mappings, options, and utilities—everything you need to understand quickly
+- 🎨 **Beautiful Themes** — Customizable UI (`UI/` folder) with 15+ components including statusline, bufferline, dashboard, and theme overrides
+- 🔌 **Offline First** — No internet required, complete privacy guaranteed with bundled NerdFonts for perfect icon rendering
+- 🛠️ **Pre-configured** — Ready to use out of the box with smart defaults, but easily tweakable via organized config structure
+- 🧠 **Smart & Intuitive** — Dedicated `Read/` folder with documentation for leader mappings, simplified mappings, and quick reference guides
+- 🔧 **Highly Customizable** — Override anything via `Overridder/` without touching core configs—your theme, your rules
+- 📦 **Language-Ready** — Pre-loaded snippets (`snippets/`) for C, C++, Go, HTML, JSON, Lua, and Rust with JSON-based customization
+- 🗂️ **Logically Organized** — Separated concerns: `Basics/` for core, `UI/` for interface, `config/` for features, `Inbuilt/` for built-in enhancements
 
 > [!IMPORTANT]
-> NvRush is 1000x better than bloated online editors while maintaining the soul of Vim/Neovim.
+> NvRush is 1000x better than bloated online editors while maintaining the soul of Vim/Neovim. Every file has a purpose, every folder tells a story.
 
 ---
 
@@ -203,7 +205,7 @@ Found a bug or have a feature request? Contributions are welcome!
 
 ## 📜 License
 
-This project is open source and available under the [GPLv3.0 License](LICENSE).
+This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
