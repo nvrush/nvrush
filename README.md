@@ -101,18 +101,61 @@ rv myfile.lua
 
 ### What You Get
 
-- **Smart Autocompletion** — Intelligent code suggestions powered by advanced engines
-- **Syntax Highlighting** — Beautiful, accurate code coloring with Treesitter
-- **File Explorer** — Intuitive file navigation with visual indicators
-- **Fuzzy Finding** — Lightning-fast file and text search across your entire project
-- **Git Integration** — Seamless version control with visual diff and blame
-- **LSP Support** — Full language server protocol integration for multiple languages
-- **Terminal Integration** — Built-in terminal access without leaving your editor
-- **Custom Keybindings** — Optimized for productivity and muscle memory
-- **Snippet Support** — Quick code templates for common patterns
-- **Diagnostic Display** — Inline error and warning messages
-- **Auto-formatting** — Keep your code clean with automatic formatting
-- **Split Windows** — Work on multiple files simultaneously with ease
+- **Custom Treesitter Theming** — No pre-baked configurations here! Define your own theme-based Treesitter colors, giving you complete control over syntax highlighting that matches YOUR vision
+
+- **Smart Auto-Pairs** — Intelligent bracket and quote completion that understands context, configured via JSON for easy customization without touching complex code
+
+- **Powerful LSP Integration** — Full language server support with custom formatters, letting you shape code formatting rules to your team's standards, not generic defaults
+
+- **Blazing Telescope Fuzzy Finder** — Lightning-fast file, text, and symbol search across your entire workspace with customizable keybindings that feel natural to YOU
+
+- **Harpoon Quick Navigation** — Mark your most-used files and jump between them instantly, because real productivity means eliminating friction from your workflow
+
+- **Beautiful Dashboard** — A welcoming startup screen that's not just pretty—it's functional, giving you quick access to recent files and projects
+
+- **Session Management** — Pick up exactly where you left off with automatic session saving and restoration, preserving your entire workspace state
+
+- **Multi-Select Editing** — Edit multiple locations simultaneously with visual feedback, because repetitive editing is for machines, not developers
+
+- **Smart Indentation Guides** — Visual indent lines that help you navigate nested code structures at a glance, fully themeable to match your aesthetic
+
+- **Snacks UI Enhancements** — Smooth animations and transitions that make your editor feel alive without sacrificing performance
+
+- **Noice Notifications** — Beautiful, non-intrusive notification system that keeps you informed without breaking your flow
+
+- **Git Integration** — Visual git signs in your gutter showing added, modified, and deleted lines, plus easy access to blame and diff views
+
+- **Integrated Terminal** — Toggle a terminal without leaving your editor, configured with smart keybindings for seamless workflow integration
+
+- **Custom Snippets** — Pre-loaded snippets for C, C++, Go, HTML, JSON, Lua, and Rust—but you're free to add your own or modify existing ones to match your coding style
+
+- **Trouble Diagnostics** — Aggregate all your errors, warnings, and LSP diagnostics in one beautiful, navigable list instead of hunting through files
+
+- **Legendary Command Palette** — A searchable command palette giving you quick access to every function, because memorizing hundreds of keybindings is optional
+
+- **TODO Comments Highlighting** — Automatically highlights and collects TODO, FIXME, HACK, and other comment tags across your project for easy tracking
+
+- **Refactoring Tools** — Built-in refactoring capabilities that let you rename, extract, and restructure code safely across your entire codebase
+
+- **Workspace Management** — Organize multiple projects and switch between them effortlessly, each with its own session and configuration
+
+- **NvimTree File Explorer** — A powerful, fast file tree with git integration, custom icons, and keybindings that make file management feel effortless
+
+- **DAP Debug UI** — Full debugging interface with breakpoints, variables inspection, and step-through debugging for supported languages
+
+- **Bufferline Tabs** — Beautiful, informative buffer tabs showing your open files with close buttons, diagnostics, and git status at a glance
+
+- **Custom Statusline** — Information-rich status bar showing mode, file info, git branch, LSP status, and diagnostics—all fully customizable
+
+- **Auto-Reload** — Files changed externally? NvRush automatically reloads them, keeping your editor in sync with your filesystem
+
+- **Smooth Scrolling** — Buttery-smooth animated scrolling that makes navigating large files feel natural and pleasant
+
+- **Comment Toggling** — Smart comment/uncomment that understands your language's syntax and respects indentation
+
+- **Bold Text Emphasis** — Strategic bold text in the UI for better readability and visual hierarchy without overwhelming your eyes
+
+- **Dressing Enhancements** — Improved vim.ui interfaces with better input and select dialogs that feel modern and intuitive
 
 ### Performance
 
