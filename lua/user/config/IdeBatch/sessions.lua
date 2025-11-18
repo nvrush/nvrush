@@ -1,75 +1,58 @@
 local resession = require("resession")
 
 resession.setup({
-    -- Auto-save options
     autosave = {
         enabled = true,
-        interval = 60, -- seconds
+        interval = 60,
         notify = false,
     },
-    
-    -- Session options
     options = {
-        "binary",
-        "bufhidden",
-        "buflisted",
-        "cmdheight",
-        "diff",
-        "filetype",
-        "modifiable",
-        "previewwindow",
-        "readonly",
-        "scrollbind",
-        "winfixheight",
-        "winfixwidth",
+        "binary", "bufhidden", "buflisted", "cmdheight",
+        "diff", "filetype", "modifiable", "previewwindow",
+        "readonly", "scrollbind", "winfixheight", "winfixwidth",
     },
-    
-    -- Extensions
     extensions = {
         overseer = {},
         quickfix = {},
     },
-    
-    -- Buffer filter
     buf_filter = function(bufnr)
         local buftype = vim.bo[bufnr].buftype
-        if buftype == "help" or buftype == "nofile" then
-            return false
-        end
-        return true
+        return buftype ~= "help" and buftype ~= "nofile"
     end,
 })
 
--- Auto-save session on exit
+-- Auto-save current session
 vim.api.nvim_create_autocmd("VimLeavePre", {
     callback = function()
         resession.save(vim.fn.getcwd(), { notify = false })
     end,
 })
 
--- Auto-load session on startup (optional)
-vim.api.nvim_create_autocmd("VimEnter", {
-    nested = true,
-    callback = function()
-        if vim.fn.argc() == 0 then
-            resession.load(vim.fn.getcwd(), { silence_errors = true })
-        end
-    end,
-})
-
--- Keymaps
+-- Keymaps with Telescope picker
 vim.keymap.set("n", "<leader>ss", function()
-    resession.save(vim.fn.getcwd())
+    vim.ui.input({ prompt = "Session name: ", default = vim.fn.fnamemodify(vim.fn.getcwd(), ":t") }, function(name)
+        if name then resession.save(name) end
+    end)
 end, { desc = "Session: Save" })
 
 vim.keymap.set("n", "<leader>sl", function()
-    resession.load(vim.fn.getcwd())
-end, { desc = "Session: Load" })
+    require("resession").load(require("resession").list()[1] or vim.fn.getcwd())
+end, { desc = "Session: Load last" })
+
+-- Telescope picker for sessions
+vim.keymap.set("n", "<leader>sf", function()
+    local ok, telescope = pcall(require, "telescope")
+    if ok then
+        require("resession").load(vim.fn.input("Session: ", "", "custom,resession"))
+    else
+        vim.ui.select(resession.list(), { prompt = "Select session:" }, function(choice)
+            if choice then resession.load(choice) end
+        end)
+    end
+end, { desc = "Session: Pick" })
 
 vim.keymap.set("n", "<leader>sd", function()
-    resession.delete(vim.fn.getcwd())
+    vim.ui.select(resession.list(), { prompt = "Delete session:" }, function(choice)
+        if choice then resession.delete(choice) end
+    end)
 end, { desc = "Session: Delete" })
-
-vim.keymap.set("n", "<leader>sf", function()
-    require("resession").list()
-end, { desc = "Session: List all" })
