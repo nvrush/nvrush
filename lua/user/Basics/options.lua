@@ -14,7 +14,7 @@ o.expandtab = true
 o.shiftwidth = 4
 o.tabstop = 4
 o.smartindent = true
-o.clipboard = "unnamedplus"
+vim.opt.clipboard = "" -- WARN: let it be as It is Otherwise it can destroy the registers of neovim & a lot of nvrush features.
 vim.cmd("filetype plugin indent on")
 -- Minimal custom tabline: show current file + indicator for more tabs
 vim.o.showtabline = 2

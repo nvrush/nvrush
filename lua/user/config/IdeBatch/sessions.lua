@@ -1,16 +1,75 @@
--- ===================================
--- Auto Sessions for Big Project work 
--- ===================================
-require("auto-session").setup({
-    log_level = "error",
-    auto_session_enable_last_session = false,
-    auto_session_enabled = true,
-    auto_save_enabled = true,
-    auto_restore_enabled = true,
-    auto_session_suppress_dirs = { "~/", "/", "/tmp" },
-    auto_session_root_dir = vim.fn.stdpath("data") .. "/sessions/", -- keep sessions in one place
-    -- Optional: hook for pre-save cleanup
-    pre_save_cmds = { "NvimTreeClose", "cclose" },
+local resession = require("resession")
+
+resession.setup({
+    -- Auto-save options
+    autosave = {
+        enabled = true,
+        interval = 60, -- seconds
+        notify = false,
+    },
+    
+    -- Session options
+    options = {
+        "binary",
+        "bufhidden",
+        "buflisted",
+        "cmdheight",
+        "diff",
+        "filetype",
+        "modifiable",
+        "previewwindow",
+        "readonly",
+        "scrollbind",
+        "winfixheight",
+        "winfixwidth",
+    },
+    
+    -- Extensions
+    extensions = {
+        overseer = {},
+        quickfix = {},
+    },
+    
+    -- Buffer filter
+    buf_filter = function(bufnr)
+        local buftype = vim.bo[bufnr].buftype
+        if buftype == "help" or buftype == "nofile" then
+            return false
+        end
+        return true
+    end,
 })
 
+-- Auto-save session on exit
+vim.api.nvim_create_autocmd("VimLeavePre", {
+    callback = function()
+        resession.save(vim.fn.getcwd(), { notify = false })
+    end,
+})
 
+-- Auto-load session on startup (optional)
+vim.api.nvim_create_autocmd("VimEnter", {
+    nested = true,
+    callback = function()
+        if vim.fn.argc() == 0 then
+            resession.load(vim.fn.getcwd(), { silence_errors = true })
+        end
+    end,
+})
+
+-- Keymaps
+vim.keymap.set("n", "<leader>ss", function()
+    resession.save(vim.fn.getcwd())
+end, { desc = "Session: Save" })
+
+vim.keymap.set("n", "<leader>sl", function()
+    resession.load(vim.fn.getcwd())
+end, { desc = "Session: Load" })
+
+vim.keymap.set("n", "<leader>sd", function()
+    resession.delete(vim.fn.getcwd())
+end, { desc = "Session: Delete" })
+
+vim.keymap.set("n", "<leader>sf", function()
+    require("resession").list()
+end, { desc = "Session: List all" })

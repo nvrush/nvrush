@@ -263,7 +263,6 @@ spec = {
     --  Add More From here
     -- ====================
     -- Command Cheat Code with Dependency which-key.nvim
-    { "mrjones2014/legendary.nvim" },
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -430,13 +429,17 @@ spec = {
   end,
 },
 
-}, -- NOTE: Closing brace for spec table!!!!!!
-
-
+    {"nvzone/showkeys"}, {"stevearc/resession.nvim"}, {"stevearc/overseer.nvim"},
 
 
 -- ==============================================================
 -- Configuration for Lazy nvim Keep Plugins above this Comment !
+-- ==============================================================
+}, -- NOTE: Closing brace for spec table!!!!!!
+
+
+-- ==============================================================
+-- WARN: Look at the NOTE and stay behind it !
 -- ==============================================================
 
 
