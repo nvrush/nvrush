@@ -213,7 +213,7 @@ cmdline = {
       },
       opts = { skip = true },
     },
-    -- Skip yanked messages  
+    -- Skip yanked messages
     {
       filter = {
         event = "msg_show",
@@ -409,37 +409,37 @@ local function setup_highlights()
     NoiceCmdlinePopupTitle = { bg = float_bg, fg = keyword_fg, bold = true },
     NoiceCmdlineIcon = { fg = info_fg },
     NoiceCmdlineIconSearch = { fg = warn_fg },
-    
+
     -- Popup menu (completion)
     NoicePopupmenu = { link = "NormalFloat" },
     NoicePopupmenuBorder = { link = "FloatBorder" },
     NoicePopupmenuSelected = { bg = pmenu_sel, bold = true },
     NoicePopupmenuMatch = { fg = keyword_fg, bold = true },
-    
+
     -- Confirmation dialogs
     NoiceConfirm = { link = "NormalFloat" },
     NoiceConfirmBorder = { bg = float_bg, fg = warn_fg },
-    
+
     -- Split view
     NoiceSplit = { link = "Normal" },
     NoiceSplitBorder = { link = "FloatBorder" },
-    
+
     -- Mini view (bottom right notifications)
     NoiceMini = { bg = float_bg, fg = ok_fg },
-    
+
     -- Format elements
     NoiceFormatTitle = { fg = keyword_fg, bold = true },
     NoiceFormatProgressTodo = { link = "Comment" },
     NoiceFormatProgressDone = { fg = ok_fg, bold = true },
-    
+
     -- LSP specific
     NoiceLspProgressTitle = { fg = func_fg },
     NoiceLspProgressClient = { fg = hint_fg },
     NoiceLspProgressSpinner = { fg = info_fg },
-    
+
     -- Virtual text
     NoiceVirtualText = { link = "DiagnosticVirtualTextInfo" },
-    
+
     -- Cursor elements
     NoiceCursor = { link = "Cursor" },
   }
@@ -542,7 +542,7 @@ if notify_ok then
       })
     end,
   })
-  
+
   -- Set as default notify handler
   vim.notify = notify
 end

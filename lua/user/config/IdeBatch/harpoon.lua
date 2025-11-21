@@ -16,9 +16,6 @@ harpoon:setup({
     },
 })
 
--- Custom highlights for better visual appeal
-vim.api.nvim_set_hl(0, "HarpoonWindow", { link = "Normal" })
-vim.api.nvim_set_hl(0, "HarpoonBorder", { fg = "#7aa2f7", bg = "NONE" })
 
 -- UI
 vim.keymap.set("n", "<C-e>", function()
@@ -31,3 +28,4 @@ vim.keymap.set("n", "<C-a>", function()
     vim.notify("Added to Harpoon", vim.log.levels.INFO)
 end, { desc = "Harpoon: Add file" })
 
+vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end , {desc = "Add to Harpoon"})

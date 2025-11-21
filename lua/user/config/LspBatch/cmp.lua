@@ -85,11 +85,11 @@ cmp.setup({
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
       vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], kind_labels[vim_item.kind])
-      
+
       if #vim_item.abbr > 30 then
         vim_item.abbr = vim_item.abbr:sub(1, 27) .. "..."
       end
-      
+
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         luasnip = "[Snip]",
@@ -97,7 +97,7 @@ cmp.setup({
         path = "[Path]",
         nvim_lua = "[Lua]",
       })[entry.source.name]
-      
+
       return vim_item
     end,
   },
@@ -124,19 +124,19 @@ cmp.setup({
     ['<Up>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
     ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
     ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-    
+
     -- Scroll through many items
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
-    
+
     -- ENTER or TAB to select and insert
-    ['<CR>'] = cmp.mapping.confirm({ 
+    ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
       select = false
     }),
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
-        cmp.confirm({ 
+        cmp.confirm({
           behavior = cmp.ConfirmBehavior.Replace,
           select = false
         })
@@ -144,11 +144,11 @@ cmp.setup({
         fallback()
       end
     end, { 'i', 's' }),
-    
+
     -- ESC or Ctrl+e to close
     ['<Esc>'] = cmp.mapping.abort(),
     ['<C-e>'] = cmp.mapping.abort(),
-    
+
     -- Ctrl+Space to manually trigger
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
@@ -184,7 +184,7 @@ cmp.setup.cmdline(':', {
     ['<Down>'] = { c = cmp.mapping.select_next_item() },
     ['<C-p>'] = { c = cmp.mapping.select_prev_item() },
     ['<C-n>'] = { c = cmp.mapping.select_next_item() },
-    
+
     -- TAB to select and insert to cmdline
     ['<Tab>'] = {
       c = function()
@@ -204,10 +204,10 @@ cmp.setup.cmdline(':', {
         end
       end,
     },
-    
+
     -- ENTER to select and execute
     ['<CR>'] = { c = cmp.mapping.confirm({ select = false }) },
-    
+
     -- ESC to close
     ['<C-e>'] = { c = cmp.mapping.abort() },
   },
@@ -258,12 +258,12 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   callback = function()
     local normal_bg = vim.api.nvim_get_hl(0, { name = "Normal" }).bg
     local normal_fg = vim.api.nvim_get_hl(0, { name = "Normal" }).fg
-    
+
     vim.api.nvim_set_hl(0, "Pmenu", { bg = normal_bg, fg = normal_fg })
     vim.api.nvim_set_hl(0, "PmenuBorder", { link = "FloatBorder" })
     vim.api.nvim_set_hl(0, "PmenuSel", { link = "CursorLine" })
     vim.api.nvim_set_hl(0, "PmenuThumb", { link = "PmenuSbar" })
-    
+
     vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { link = "Search" })
     vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { link = "Search" })
     vim.api.nvim_set_hl(0, "CmpItemKindFunction", { link = "Function" })

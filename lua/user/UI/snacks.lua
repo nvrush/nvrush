@@ -13,7 +13,7 @@ end
 local function get_colors()
   local bg = vim.api.nvim_get_hl(0, { name = "Normal" }).bg or "#1e1e2e"
   local fg = vim.api.nvim_get_hl(0, { name = "Normal" }).fg or "#cdd6f4"
-  
+
   return {
     bg = bg,
     fg = fg,
@@ -57,7 +57,7 @@ snacks.setup({
     top_down = false,         -- Show from bottom to top
     date_format = "%R",       -- Time format
     refresh = 50,             -- Refresh rate in ms
-    
+
     -- Modern styling
     styles = {
       notification = {
@@ -72,7 +72,7 @@ snacks.setup({
         },
         bo = { filetype = "snacks_notif" },
       },
-      
+
       notification_history = {
         border = "rounded",
         zindex = 100,
@@ -149,7 +149,7 @@ snacks.setup({
         },
       },
     },
-    
+
     -- Icons and formatting
     icons = {
       file = " ",
@@ -157,15 +157,15 @@ snacks.setup({
       modified = "● ",
       hidden = " ",
     },
-    
+
     -- Display options
     show_count = true,
     show_icons = true,
     show_modified = true,
-    
+
     -- Performance
     debounce = 30,
-    
+
     -- Preview window
     preview = {
       enabled = true,
@@ -175,7 +175,7 @@ snacks.setup({
         winhighlight = "Normal:SnacksPickerPreview,FloatBorder:SnacksPickerPreviewBorder",
       },
     },
-    
+
     -- Matchers & sorters
     matcher = {
       frecency = true,
@@ -189,13 +189,13 @@ snacks.setup({
   progress = {
     enabled = true,
     interval = 50,            -- Refresh rate in ms
-    
+
     -- Spinner animation
     spinner = {
       frames = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" },
       interval = 80,
     },
-    
+
     -- Window configuration
     win = {
       relative = "editor",
@@ -214,7 +214,7 @@ snacks.setup({
         winhighlight = "Normal:SnacksProgressNormal,FloatBorder:SnacksProgressBorder,FloatTitle:SnacksProgressTitle",
       },
     },
-    
+
     -- Display format
     format = {
       icon = " ",
@@ -285,7 +285,7 @@ snacks.setup({
   styles = {
     notification = {
       border = "rounded",
-      wo = { 
+      wo = {
         winblend = 10,
         wrap = true,
       },
@@ -306,7 +306,7 @@ snacks.setup({
 -- ═══════════════════════════════════════════════════════════
 local function setup_highlights()
   local colors = get_colors()
-  
+
   local highlights = {
     -- Notification highlights
     SnacksNotifierInfo = { fg = colors.info, bold = true },
@@ -324,13 +324,13 @@ local function setup_highlights()
     SnacksNotifierFooter = { fg = colors.muted, italic = true },
     SnacksNotifierHistory = { bg = colors.bg, fg = colors.fg },
     SnacksNotifierHistoryBorder = { fg = colors.purple, bg = colors.bg, bold = true },
-    
+
     -- Input prompt highlights
     SnacksInputNormal = { bg = colors.bg, fg = colors.fg },
     SnacksInputBorder = { fg = colors.teal, bg = colors.bg, bold = true },
     SnacksInputTitle = { fg = colors.teal, bold = true },
     SnacksInputIcon = { fg = colors.accent, bold = true },
-    
+
     -- Picker highlights
     SnacksPickerNormal = { bg = colors.bg, fg = colors.fg },
     SnacksPickerBorder = { fg = colors.accent, bg = colors.bg, bold = true },
@@ -345,17 +345,17 @@ local function setup_highlights()
     SnacksPickerFile = { fg = colors.fg },
     SnacksPickerModified = { fg = colors.orange },
     SnacksPickerHidden = { fg = colors.muted, italic = true },
-    
+
     -- Progress highlights
     SnacksProgressNormal = { bg = colors.bg, fg = colors.success },
     SnacksProgressBorder = { fg = colors.success, bg = colors.bg },
     SnacksProgressTitle = { fg = colors.success, bold = true },
     SnacksProgressSpinner = { fg = colors.warning, bold = true },
     SnacksProgressBar = { fg = colors.success, bg = colors.highlight },
-    
+
     -- Backdrop
     SnacksBackdrop = { bg = "#000000", blend = 60 },
-    
+
     -- Dashboard (if enabled)
     SnacksDashboardHeader = { fg = colors.accent, bold = true },
     SnacksDashboardFooter = { fg = colors.muted, italic = true },
@@ -365,10 +365,10 @@ local function setup_highlights()
     SnacksDashboardFile = { fg = colors.info },
     SnacksDashboardDir = { fg = colors.accent },
     SnacksDashboardSpecial = { fg = colors.teal },
-    
+
     -- Words highlight
     SnacksWords = { bg = colors.highlight, underline = true },
-    
+
     -- Search highlights
     SnacksSearch = { bg = colors.warning, fg = colors.bg, bold = true },
     SnacksSearchCurrent = { bg = colors.error, fg = colors.bg, bold = true },
@@ -376,53 +376,53 @@ local function setup_highlights()
     IncSearch = { bg = colors.warning, fg = colors.bg, bold = true },
     CurSearch = { bg = colors.error, fg = colors.bg, bold = true },
     Search = { bg = colors.orange, fg = colors.bg },
-    
+
     -- Indent guides
     -- SnacksIndent = { fg = colors.muted },
    -- SnacksIndentScope = { fg = colors.accent, bold = true },
-    
+
     -- Scope highlights
     SnacksScope = { bg = colors.highlight },
     SnacksScopeUnderline = { underline = true, sp = colors.accent },
   }
-  
+
   -- Apply highlights
   for group, settings in pairs(highlights) do
     vim.api.nvim_set_hl(0, group, settings)
   end
-  
+
   -- Also set standard Vim search highlights for consistency
   vim.api.nvim_set_hl(0, "Search", { bg = colors.orange, fg = colors.bg })
   vim.api.nvim_set_hl(0, "IncSearch", { bg = colors.warning, fg = colors.bg, bold = true })
   vim.api.nvim_set_hl(0, "CurSearch", { bg = colors.error, fg = colors.bg, bold = true })
   vim.api.nvim_set_hl(0, "Substitute", { bg = colors.error, fg = colors.bg, bold = true })
-  
+
   -- Visual mode selection
  -- vim.api.nvim_set_hl(0, "Visual", { bg = colors.highlight, bold = true })
  -- vim.api.nvim_set_hl(0, "VisualNOS", { bg = colors.highlight })
-  
+
   -- Cursor highlights
  --  vim.api.nvim_set_hl(0, "Cursor", { fg = colors.bg, bg = colors.fg })
  -- vim.api.nvim_set_hl(0, "CursorLine", { bg = colors.highlight })
  -- vim.api.nvim_set_hl(0, "CursorLineNr", { fg = colors.accent, bold = true })
  --  vim.api.nvim_set_hl(0, "LineNr", { fg = colors.muted })
-  
+
   -- Match parentheses
   vim.api.nvim_set_hl(0, "MatchParen", { fg = colors.warning, bold = true, underline = true })
-  
+
   -- Fold highlights
   vim.api.nvim_set_hl(0, "Folded", { bg = colors.highlight, fg = colors.muted, italic = true })
   vim.api.nvim_set_hl(0, "FoldColumn", { fg = colors.muted })
-  
+
   -- Sign column
   vim.api.nvim_set_hl(0, "SignColumn", { bg = colors.bg })
-  
+
   -- Pmenu (popup menu) - for completions
   vim.api.nvim_set_hl(0, "Pmenu", { bg = colors.highlight, fg = colors.fg })
   vim.api.nvim_set_hl(0, "PmenuSel", { bg = colors.accent, fg = colors.bg, bold = true })
   vim.api.nvim_set_hl(0, "PmenuSbar", { bg = colors.highlight })
   vim.api.nvim_set_hl(0, "PmenuThumb", { bg = colors.accent })
-  
+
   -- Command line
   vim.api.nvim_set_hl(0, "MsgArea", { fg = colors.fg })
   vim.api.nvim_set_hl(0, "ModeMsg", { fg = colors.info, bold = true })
@@ -430,43 +430,43 @@ local function setup_highlights()
   vim.api.nvim_set_hl(0, "Question", { fg = colors.warning, bold = true })
   vim.api.nvim_set_hl(0, "WarningMsg", { fg = colors.warning, bold = true })
   vim.api.nvim_set_hl(0, "ErrorMsg", { fg = colors.error, bold = true })
-  
+
   -- Diagnostic highlights
   vim.api.nvim_set_hl(0, "DiagnosticError", { fg = colors.error })
   vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = colors.warning })
   vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = colors.info })
   vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = colors.teal })
   vim.api.nvim_set_hl(0, "DiagnosticOk", { fg = colors.success })
-  
+
   -- Virtual text
   vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { fg = colors.error, italic = true })
   vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { fg = colors.warning, italic = true })
   vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { fg = colors.info, italic = true })
   vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { fg = colors.teal, italic = true })
-  
+
   -- Underlines for diagnostics
   vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = colors.error })
   vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = colors.warning })
   vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = colors.info })
   vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = true, sp = colors.teal })
-  
+
   -- Spell checking
   vim.api.nvim_set_hl(0, "SpellBad", { undercurl = true, sp = colors.error })
   vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = colors.warning })
   vim.api.nvim_set_hl(0, "SpellLocal", { undercurl = true, sp = colors.info })
   vim.api.nvim_set_hl(0, "SpellRare", { undercurl = true, sp = colors.teal })
-  
+
   -- Diff highlights
   vim.api.nvim_set_hl(0, "DiffAdd", { bg = "#2a3a2f", fg = colors.success })
   vim.api.nvim_set_hl(0, "DiffChange", { bg = "#3a3a2f", fg = colors.warning })
   vim.api.nvim_set_hl(0, "DiffDelete", { bg = "#3a2a2f", fg = colors.error })
   vim.api.nvim_set_hl(0, "DiffText", { bg = "#4a4a2f", fg = colors.warning, bold = true })
-  
+
   -- Git signs (if using gitsigns.nvim)
   vim.api.nvim_set_hl(0, "GitSignsAdd", { fg = colors.success })
   vim.api.nvim_set_hl(0, "GitSignsChange", { fg = colors.warning })
   vim.api.nvim_set_hl(0, "GitSignsDelete", { fg = colors.error })
-  
+
   -- Telescope (if using telescope.nvim)
   vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = colors.accent, bg = colors.bg })
   vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = colors.teal, bg = colors.bg })
@@ -546,11 +546,11 @@ keymap("n", "<leader>sp", function()
     title = "Loading",
     message = "Processing...",
   })
-  
+
   vim.defer_fn(function()
     progress:update({ percentage = 50, message = "Half way..." })
   end, 1000)
-  
+
   vim.defer_fn(function()
     progress:update({ percentage = 100, message = "Complete!" })
     progress:close()
@@ -563,11 +563,11 @@ keymap("n", "<leader>sw", function()
 end, { desc = "Snacks: Toggle word highlighting", silent = true })
 
 -- Search highlighting toggle
-keymap("n", "<leader>sh", "<cmd>set hlsearch!<CR>", 
+keymap("n", "<leader>sh", "<cmd>set hlsearch!<CR>",
   { desc = "Snacks: Toggle search highlighting", silent = true })
 
 -- Clear search highlight
-keymap("n", "<Esc>", "<cmd>nohlsearch<CR>", 
+keymap("n", "<Esc>", "<cmd>nohlsearch<CR>",
   { desc = "Clear search highlighting", silent = true })
 
 -- Big file info

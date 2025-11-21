@@ -84,9 +84,13 @@ safe_require("user.config.LspBatch.luasnip")
 safe_require("user.PluginExtensionConfiguration.overseer")
 
 -- ============= ============= ============= ============= 
--- 5. Custom Cmp
+-- 5. Custom Cmp 
 -- ============= ============= ============= ============= 
-safe_require("user.CustomCmp.cmp-gd")
+
+-- NOTE: Please uncomment this only when working on Gdscript !
+-- NOTE: IS CURRENTLY IN NON-PRODUCTION READY BUT WORKING STATE !
+-- safe_require("user.CustomCmp.cmp-gd")
+
 
 -- ============= ============= ============= ============= ============= 
 -- Don't uncommemt until the above ones behave different
