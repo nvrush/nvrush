@@ -1,10 +1,17 @@
-# nvrush/
+# nvrush
 
 <a href="https://dotfyle.com/nvrush/nvrush"><img src="https://dotfyle.com/nvrush/nvrush/badges/plugins?style=flat" /></a>
 <a href="https://dotfyle.com/nvrush/nvrush"><img src="https://dotfyle.com/nvrush/nvrush/badges/leaderkey?style=flat" /></a>
 <a href="https://dotfyle.com/nvrush/nvrush"><img src="https://dotfyle.com/nvrush/nvrush/badges/plugin-manager?style=flat" /></a>
 
 [![Dotfyle Stats](https://dotfyle.com/plugins/<nvrush>/<nvrush>/shield)](https://dotfyle.com/plugins/<nvrush>/<nvrush>)
+![Screenshot_20251125_072755](https://github.com/user-attachments/assets/87cdf801-daf6-4f82-8ae3-a89199a1566c)
+![Screenshot_20251125_071550](https://github.com/user-attachments/assets/9d554a5a-e4ef-42df-b4c8-d32a7ecd9779)
+![Screenshot_20251125_072511](https://github.com/user-attachments/assets/775e5efa-9550-4a83-9856-2017843e15d0)
+![Screenshot_20251125_072049](https://github.com/user-attachments/assets/69f55bea-2a50-48cd-8699-5224a57803b5)
+![Screenshot_20251125_071340](https://github.com/user-attachments/assets/29c00f8f-cb6b-4fc6-9049-10bac8e5ce22)
+
+
 ## Install Instructions
 
  > Install requires Neovim 0.9+. Always review the code before installing a configuration.
