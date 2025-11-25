@@ -31,10 +31,10 @@
   <img src="https://img.shields.io/github/issues/nvrush/nvrush?style=for-the-badge&color=50fa7b&labelColor=282a36" alt="Issues">
 </p>
 
-<p align="center">
-  <i>⚡ A blazingly fast, modern Neovim configuration inspired by NvChad, LunarVim & LazyVim</i>
-</p>
-
+<video width="600" controls autoplay muted loop>
+  <source src="https://github.com/user/nvrush/nvrush/releases/download/Nvrush/NvRush.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 [![Dotfyle Stats](https://dotfyle.com/plugins/<nvrush>/<nvrush>/shield)](https://dotfyle.com/plugins/<nvrush>/<nvrush>)
 ![Screenshot_20251125_072755](https://github.com/user-attachments/assets/87cdf801-daf6-4f82-8ae3-a89199a1566c)
