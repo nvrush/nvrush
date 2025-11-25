@@ -3,6 +3,10 @@
 <a href="https://dotfyle.com/nvrush/nvrush"><img src="https://dotfyle.com/nvrush/nvrush/badges/plugins?style=flat" /></a>
 <a href="https://dotfyle.com/nvrush/nvrush"><img src="https://dotfyle.com/nvrush/nvrush/badges/leaderkey?style=flat" /></a>
 <a href="https://dotfyle.com/nvrush/nvrush"><img src="https://dotfyle.com/nvrush/nvrush/badges/plugin-manager?style=flat" /></a>
+![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
+![GitHub issues](https://img.shields.io/github/issues/username/repo)
+![GitHub forks](https://img.shields.io/github/forks/username/repo)
+![GitHub stars](https://img.shields.io/github/stars/username/repo)
 
 [![Dotfyle Stats](https://dotfyle.com/plugins/<nvrush>/<nvrush>/shield)](https://dotfyle.com/plugins/<nvrush>/<nvrush>)
 ![Screenshot_20251125_072755](https://github.com/user-attachments/assets/87cdf801-daf6-4f82-8ae3-a89199a1566c)
