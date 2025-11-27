@@ -11,14 +11,10 @@ cmp.setup({
         ['<Up>'] = { 'select_prev', 'fallback' },
         ['<Down>'] = { 'select_next', 'fallback' },
         ['<CR>'] = { 'accept', 'fallback' },
-        ['<C-space>'] = { 'show', 'fallback' },
-        ['<C-e>'] = { 'hide', 'fallback' },
-        ['<C-u>'] = { 'scroll_documentation_up', 'fallback' },
-        ['<C-d>'] = { 'scroll_documentation_down', 'fallback' },
     },
 
     appearance = {
-        use_nvim_cmp_as_default = true,
+        use_nvim_cmp_as_default = false,
         nerd_font_variant = 'mono',
     },
 
@@ -26,14 +22,14 @@ cmp.setup({
         default = { 'lsp', 'path', 'snippets', 'buffer' },
     },
 
-    cmdline = {
-        enabled = true,
-        sources = {
-            [':'] = { 'cmdline', 'path' },
-            ['/'] = { 'buffer' },
-            ['?'] = { 'buffer' },
-        },
-    },
+    -- cmdline = {
+    --     enabled = true,
+    --     completion = {
+    --         menu = {
+    --             auto_show = true,
+    --         }
+    --     },
+    -- },
 
     completion = {
         accept = {
@@ -86,7 +82,6 @@ cmp.setup({
     },
 
     fuzzy = {
-        use_typo_resistance = true,
         frecency = {
             enabled = true,
         },
@@ -99,7 +94,6 @@ cmp.setup({
             border = 'single',
         },
     },
-
     snippets = {
         expand = function(snippet)
             require('luasnip').lsp_expand(snippet)

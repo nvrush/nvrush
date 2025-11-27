@@ -64,8 +64,10 @@ safe_require("user.Mini.mini_notify")
 -- ============= ============= ============= =============
 
 safe_require("user.config.LspBatch.lsp")
--- safe_require("user.config.LspBatch.cmp")
-safe_require("user.config.LspBatch.blinkCmp")
+-- NOTE: WHILE WORKING WITH BLINK : Make sure to comment this & uncomment below ones:
+safe_require("user.config.LspBatch.cmp") -- Comment this for blink completion
+-- safe_require("user.config.LspBatch.cmd_cmp") -- Comment this for nvim completion
+-- safe_require("user.config.LspBatch.blinkCmp") -- Comment this for nvim completion
 safe_require("user.config.LspBatch.autopairs")
 safe_require("user.config.LspBatch.formatter")
 
