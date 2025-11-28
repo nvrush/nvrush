@@ -1,4 +1,3 @@
-```md
 # Codeootus
 
 ![BCO 2ade9fd7-19fd-405d-8be3-9bcf3a23e4c](https://github.com/user-attachments/assets/800826c3-92a8-4980-b1d8-7b2eb83e46c5)
