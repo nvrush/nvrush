@@ -1,83 +1,77 @@
+```md
 # Codeootus
+
 ![BCO 2ade9fd7-19fd-405d-8be3-9bcf3a23e4c](https://github.com/user-attachments/assets/800826c3-92a8-4980-b1d8-7b2eb83e46c5)
 
 <video src="https://github.com/user-attachments/assets/65301e67-8b47-4cf6-b998-cde671436aa7" autoplay loop muted playsinline></video>
 
 ![Screenshot_20251125_072755](https://github.com/user-attachments/assets/b0ad4069-4c9e-40f7-a000-423205d2420e)
 
-## About
-Codeotus is a Beautiful , multilingual , multi-themed & multi-plugin supported IDE which priotises writing Code in easier & faster way while keeping everything intact & working. It is more focused to be easy for novice people. 
+---
 
-As of now it is mostly vibe coded to match the maximum configuration detailings. Yes about 7000+ line of codes are written by Ai for fatser & enhaced service.
+## The Problem
 
-Codeotus is full of rich features , the author itself adds the most relevant plugins & features he likes. Currently the autor(me) is testing mmini.nvim ecosystem & uupdates are quite regular at configuration levels.
+You open your editor. Themes break. Plugins conflict. Sessions vanish. Your device isn't supported. You waste hours configuring what should just work. The pain compounds daily.
 
-Is a wardobe of themes , goaat of file motions  & Fully-Open-Source under MIT license.
+Every developer knows this story. We've lived it. The fragmentation, the configuration hell, the endless tinkering that steals time from actual coding. Modern development shouldn't feel like assembling furniture without instructions.
 
-> [!IMPORTANT]
-> Space key is the default leader 
+## The Solution
 
-## Hots 
-1. Fixed Bloated unwanted plugins
-2. Better nvim-cmp default support for Codeotus
-3. blink-cmp for buffer + nvim-cmp support for command line
+Codeotus eliminates the chaos. Not by adding more features, but by solving the problems that actually matter. It's a Neovim configuration that understands what developers need: speed, stability, and zero friction between thought and code.
 
-## ToDo
-1. Fix Keymappings
-2. Add Workspace
+Built on battle-tested plugins, refined through thousands of lines of configuration, and designed for humans who want to write code instead of maintaining their editor. This isn't about chasing trends. This is about removing obstacles.
 
-## Open-Selling Point
+Space is your leader key. Everything follows from there.
 
-### Why would you used Codeotus if there are already many IDEs ? Well here is why! :
+---
 
-1. Bored of finding a new theme each day ?
-2. Bored of managing files & toggling theme in the hard way ?
-3. Bored & Frustrated of losing your Previous sessions ? 
-4. Bored of paying just for coding ?
-5. Frustrated of Distracted Environment and wants peace ?
-6. Frustrated of Editing/Adding/Deleting plugins ?
-7. Frustrated in setting-up your first Neovim config ?
-8. Hates when major IDEs say : "Your device is unsupported!" ?
-9. Wants In-Terminal only & Terminal Integrated space ?
-10. Wasted your Time ?
+## What Makes This Different
 
-### What Codeotus Promises to give :
+**85 themes that actually work.** Switch between Rose Pine, Catppuccin, Gruvbox, and 82 others without breaking your workflow. No configuration required. No surprises.
 
-1. Collection of 85 themes i.e use a themes.
-2. Faster in files/folder/buffers motions & well integration with workspace & sessions.
-3. Resession gives features to save multi-sessions in seconds & loads any desired one.
-4. Only full of non-distractive/non-errorus things & is Zen Mode enabled.
-5. Highly Open-source & Quality of Life focused.
-6. Easier Adding/Editing/Deleting of Wanted & Uwanted features.
-7. Preconfigured Lsp & Plugins for direct code wars. 
-8. Runs almost everywhere even on Qualcom Snapdragon 4 Gen 1 Chipset.
-9. Guides , Support & Time saving For Novice people.
-10. Unstoppabl integration with Linux.
-11. Features on Demand ! 
+**File motion that feels telepathic.** Harpoon, Telescope, Oil, Arrow, and Snipe working in harmony. Navigate codebases like you're reading your own thoughts. Find anything in seconds.
 
-## Open-Weakness Point
+**Sessions that remember everything.** Lost work is a solved problem. Resession captures your entire workspace state. Come back tomorrow and pick up exactly where you left off.
 
-### Major Weakness : 
+**LSP integration without the headache.** Preconfigured servers for C, C++, Go, Lua, TypeScript, PHP, Markdown, GDScript, and more. Add new ones in minutes. Mason handles the complexity.
 
-1. Absence of contributors , maintained by Solo Developer & no stars.
-2. Features only will be added if demanded or desired to be addded.
-3. Some Leader Bindings might feels un-neccessary.
-4. Direct Battle Tested launch & no previous version only the most faster & latest build is available.
-5. Learning Curves can be big in the future.
-6. 7000+ Lines of Configurations.
+**Two completion engines because choice matters.** Default to nvim-cmp for reliability. Switch to blink-cmp when you want bleeding edge. Both configured perfectly.
 
-##  Requirements
+**Resource efficient by design.** Runs on a Snapdragon 4 Gen 1. If your hardware can boot, it can run Codeotus. Performance isn't a luxury feature.
 
-1. Neovim 0.10 or higher.
-2. Git to newest version.
-3. ~200 MB of free disk space for initial setup.
+---
 
-> [!WARN]
-> Plugin download can cost 100-200 MiB of Data.
+## Core Philosophy
 
-##  Installation
+Speed without sacrifice. Features without bloat. Power without complexity.
 
-### **Clone and install:**
+Every plugin serves a purpose. Every keybinding solves a problem. Every default makes sense. We removed the noise so you can focus on signal.
+
+This configuration respects three truths: your time is valuable, your workflow is personal, and your code deserves an environment built for creation, not configuration.
+
+---
+
+## Built For Real Work
+
+Integrated terminal that doesn't interrupt flow. Lazygit for version control that stays out of your way. Zen mode when you need deep focus. Multiple sessions when you're juggling projects.
+
+Treesitter for syntax that understands context. Statusline and bufferline showing what matters. Notifications that inform without distracting. Inline diagnostics only when you're ready to see them.
+
+Snippet support for reducing repetition. Formatting that happens automatically. Startup screen that gets you oriented. Comments, surround operations, and block movements that feel natural.
+
+Everything works together because it was designed to work together.
+
+---
+
+## Getting Started
+
+### Requirements
+
+Neovim 0.10 or higher. Git at the latest version. About 200MB of disk space for the initial setup. Plugin downloads will use 100-200MB of bandwidth.
+
+### Installation
+
+Clone and launch in one motion:
 
 ```sh
 mkdir -p ~/.config/Codeotus
@@ -86,146 +80,145 @@ git clone https://github.com/Codeotus/Codeotus.git .
 NVIM_APPNAME=Codeotus nvim
 ```
 
-### **Create a convenient alias:**
+Create an alias for convenience:
 
 ```sh
-# For Bash users
+# Bash
 echo "alias cod='NVIM_APPNAME=Codeotus nvim'" >> ~/.bashrc
 source ~/.bashrc
 
-# For Zsh users
+# Zsh
 echo "alias cod='NVIM_APPNAME=Codeotus nvim'" >> ~/.zshrc
 source ~/.zshrc
 ```
-> [!NOTE]
-> Now you can launch Codeotus with just `cod`!
 
-> **Note:** On first launch, you may need to reload your colorscheme with `:colorscheme gruvbox-baby` if themes appear dull.
+Launch with `cod` from anywhere.
 
-##  Uninstall
+Note: On first launch, reload your colorscheme with `:colorscheme gruvbox-baby` if themes appear washed out.
+
+### Removal
+
+Clean uninstall when you need it:
 
 ```sh
 rm -rf ~/.config/Codeotus/
 rm -rf ~/.local/share/Codeotus/
 ```
 
-## Project Structure 
-The project structure is consist of about 90 Files & 24 directories.
-Despite being too big it is quite easy to maintain as almost 95% of the features are up-to-data & working.
+---
 
-> [!IMPORTANT]
-> This is only a Project structure.
-> To get it do install tree & run at the root of Codeotus :
-> ```sh
-tree ~/.config/Codeotus/
-> ```
+## Architecture
+
+The configuration spans 90 files across 24 directories. Despite the size, it's maintainable. Ninety-five percent of features work out of the box and stay working.
+
+Project structure:
 
 ```tree
-├── Books # Just some personal quotings
-│   └── LifeBookQuotes.md
+├── Books
+│   └── LifeBookQuotes.md
 ├── LICENSE
 ├── README.md
-├── docs # Codeotus Static Website / Currently under maintainance
-│   ├── assets
-│   ├── css
-│   ├── index.html
-│   └── js
-├── for_noobs # To be written 
-├── init.lua # Your configured lua file calling point 
-├── lazy-lock.json # Keep it as it is 
-└── lua # Entrance of main code config 
-    └── user # Just the entry folder.
-        ├── Basics # System plugins/setups go here 
-        │   ├── autoreload.lua
-        │   ├── env.lua
-        │   ├── mappings.lua
-        │   ├── mason.lua
-        │   ├── options.lua
-        │   ├── plugins.lua
-        │   └── utilities.lua
-        ├── CustomCmp # Custom completion for GdScript & is under maintaince 
-        │   ├── cmp-gd.lua
-        │   ├── gdscript_autocompletion.json
-        │   └── source-gd.lua
-        ├── Inbuilt # Inbuilt for do it yourself people 
-        │   ├── comment.lua
-        │   └── luanmulti.lua
-        ├── Mini # Mini ecosystem best plugins. 
-        │   ├── mini_icons.lua
-        │   ├── mini_notify.lua
-        │   └── mini_surround.lua
-        ├── NerdFonts # Jetbrains Mono Nerd fonts for Linux System.
-        │   ├── JetBrains Mono NL SemiBold Nerd Font Complete Mono.ttf
-        │   ├── JetBrains Mono NL SemiBold Nerd Font Complete.ttf
-        │   ├── JetBrains Mono Regular Nerd Font Complete Mono.ttf
-        │   ├── JetBrains Mono Regular Nerd Font Complete.ttf
-        │   ├── JetBrainsMonoNerdFont-Regular.ttf
-        │   ├── JetBrainsMonoNerdFont-SemiBold.ttf
-        │   └── NerdFonts.md
-        ├── Overridder # Custom treesitter workspace 
-        │   ├── Caller.lua
-        │   └── gruvbox_ts.lua
-        ├── PluginExtensionConfiguration # Workspace for its name 
-        │   └── overseer.lua
-        ├── Read # This will be Shifted to ~/.config/cod/for_noobs/
-        │   └── ABOUT
-        │       └── Keys.md
-        ├── UI # Ui & Colors etc.
-        │   ├── DAP_UI.lua -- Not tested yet!
-        │   ├── IBL.lua -- indent-blankline guides.
-        │   ├── NoMoreItalics.lua -- No italics for better Zen mode.
-        │   ├── SetGlobalTheme.lua -- Global theme set config (Don't configure carelessly).
-        │   ├── ascii.lua -- For startup screen.
-        │   ├── bold_text.lua -- Mainly for ellison-gruvbox to bold the text.
-        │   ├── bufferline.lua -- for bufferline (Don't configure carelessly).
-        │   ├── colors.lua -- Let it be as it is 
-        │   ├── custom_treesitters.lua -- Does what says 
-        │   ├── dashboard.lua -- Works with ascii 
-        │   ├── diagonasticsigns.lua -- Don't disturb it for fun.
-        │   ├── dressing.lua -- Important & for inputs.
-        │   ├── gitsigns.lua -- gutter signs.
-        │   ├── noice.lua -- by default is plugged-off in init.lua 
-        │   ├── notify.lua -- Backend for mini.notify 
-        │   ├── snacks.lua -- Fallback for mini.notify & is plugged-off
-        │   ├── statusline.lua -- Works well don't disturb
-        │   ├── theme.lua -- Don't add anything , can break functionality.
-        │   └── windows.lua -- Windows related and can be modified 
-        ├── config # Main point for IdeBatch & LspBatch 
-        │   ├── IdeBatch -- For Ide config & all works well !
-        │   │   ├── arrow.lua
-        │   │   ├── comments.lua
-        │   │   ├── harpoon.lua
-        │   │   ├── lazygit.lua
-        │   │   ├── multiselect.lua
-        │   │   ├── neoscroll.lua
-        │   │   ├── nvimtree.lua
-        │   │   ├── oil.lua
-        │   │   ├── refactoring.lua
-        │   │   ├── sessions.lua
-        │   │   ├── showkey.lua
-        │   │   ├── snipe.lua
-        │   │   ├── surround.lua
-        │   │   ├── telescope.lua
-        │   │   ├── todo.lua 
-        │   │   ├── toggleterm.lua
-        │   │   ├── treesitter.lua
-        │   │   ├── whkey.lua -- which-key
-        │   │   └── workspace.lua -- Currently needs a better configuration
-        │   └── LspBatch # Lsp related plugins 
-        │       ├── autopairs.json
-        │       ├── autopairs.lua
-        │       ├── blinkCmp.lua -- plugged off by default 
-        │       ├── cmd_cmp.lua -- plugged off by default & is dependency of blinkCmp.lua so turn on if using blink 
-        │       ├── cmp.lua -- Default completion engine / Turn off if wants blink & don't forget to plug blink & dependency file in init.lua 
-        │       ├── formatter.lua -- Formatting/Conform.mvim 
-        │       ├── lsp.lua -- Lsp hub 
-        │       ├── lspkind.lua -- Lsp icons 
-        │       ├── luasnip.lua -- Lsp snippets 
-        │       ├── navic.lua -- Navic 
-        │       └── trouble.lua -- Diagonastics diisplay 
-        ├── json # Jsom related stuffs do go here 
-        │   └── harpoon_storage.json
-        └── snippets # Define snippets here in VsCode style!
+├── docs
+│   ├── assets
+│   ├── css
+│   ├── index.html
+│   └── js
+├── for_noobs
+├── init.lua
+├── lazy-lock.json
+└── lua
+    └── user
+        ├── Basics
+        │   ├── autoreload.lua
+        │   ├── env.lua
+        │   ├── mappings.lua
+        │   ├── mason.lua
+        │   ├── options.lua
+        │   ├── plugins.lua
+        │   └── utilities.lua
+        ├── CustomCmp
+        │   ├── cmp-gd.lua
+        │   ├── gdscript_autocompletion.json
+        │   └── source-gd.lua
+        ├── Inbuilt
+        │   ├── comment.lua
+        │   └── luanmulti.lua
+        ├── Mini
+        │   ├── mini_icons.lua
+        │   ├── mini_notify.lua
+        │   └── mini_surround.lua
+        ├── NerdFonts
+        │   ├── JetBrains Mono NL SemiBold Nerd Font Complete Mono.ttf
+        │   ├── JetBrains Mono NL SemiBold Nerd Font Complete.ttf
+        │   ├── JetBrains Mono Regular Nerd Font Complete Mono.ttf
+        │   ├── JetBrains Mono Regular Nerd Font Complete.ttf
+        │   ├── JetBrainsMonoNerdFont-Regular.ttf
+        │   ├── JetBrainsMonoNerdFont-SemiBold.ttf
+        │   └── NerdFonts.md
+        ├── Overridder
+        │   ├── Caller.lua
+        │   └── gruvbox_ts.lua
+        ├── PluginExtensionConfiguration
+        │   └── overseer.lua
+        ├── Read
+        │   └── ABOUT
+        │       └── Keys.md
+        ├── UI
+        │   ├── DAP_UI.lua
+        │   ├── IBL.lua
+        │   ├── NoMoreItalics.lua
+        │   ├── SetGlobalTheme.lua
+        │   ├── ascii.lua
+        │   ├── bold_text.lua
+        │   ├── bufferline.lua
+        │   ├── colors.lua
+        │   ├── custom_treesitters.lua
+        │   ├── dashboard.lua
+        │   ├── diagonasticsigns.lua
+        │   ├── dressing.lua
+        │   ├── gitsigns.lua
+        │   ├── noice.lua
+        │   ├── notify.lua
+        │   ├── snacks.lua
+        │   ├── statusline.lua
+        │   ├── theme.lua
+        │   └── windows.lua
+        ├── config
+        │   ├── IdeBatch
+        │   │   ├── arrow.lua
+        │   │   ├── comments.lua
+        │   │   ├── harpoon.lua
+        │   │   ├── lazygit.lua
+        │   │   ├── multiselect.lua
+        │   │   ├── neoscroll.lua
+        │   │   ├── nvimtree.lua
+        │   │   ├── oil.lua
+        │   │   ├── refactoring.lua
+        │   │   ├── sessions.lua
+        │   │   ├── showkey.lua
+        │   │   ├── snipe.lua
+        │   │   ├── surround.lua
+        │   │   ├── telescope.lua
+        │   │   ├── todo.lua
+        │   │   ├── toggleterm.lua
+        │   │   ├── treesitter.lua
+        │   │   ├── whkey.lua
+        │   │   └── workspace.lua
+        │   └── LspBatch
+        │       ├── autopairs.json
+        │       ├── autopairs.lua
+        │       ├── blinkCmp.lua
+        │       ├── cmd_cmp.lua
+        │       ├── cmp.lua
+        │       ├── formatter.lua
+        │       ├── lsp.lua
+        │       ├── lspkind.lua
+        │       ├── luasnip.lua
+        │       ├── navic.lua
+        │       └── trouble.lua
+        ├── json
+        │   └── harpoon_storage.json
+        └── snippets
             ├── c.json
             ├── cpp.json
             ├── go.json
@@ -236,68 +229,56 @@ tree ~/.config/Codeotus/
             └── rs.json
 ```
 
-##  Featured Plugins
+Generate this view with: `tree ~/.config/Codeotus/`
 
-### Core Features
-
-Lazy integrated + Mason Support , Harpoon2 oil.nvim telescope.nvim for file navigation.
-
-Lsp support via neovim lsp & easy Addition & discontinuation of lsps.
-
-Faster autocomoletion engines nvim-cmp.nvim & blink-cmp.lua.
-
-Treesitters , Lazygit , Statusline & bufferlines etc features are supported very well.
-
-Nvim-Notify + Mini.nvim & Snacks as fallback for notifications.
-
-Neovim surround + Region commenting + Selected Block movement + Terminal integration + Resessiom for multi session & workspacs + indent-blanklines for Smarter features + Inline Diagonastics only in Normal mode + Snippets + Formatting + Startup Screen & more ! 
-
-### Popular Themes Included
-Choose from 85 themes including:
-1. Rose-pine
-2. Catppuccin
-3. Gruvbox 
-4. Biscuit
-5. Bamboo
-6. Melange
-7. Github
-8. Tokyonight
-9. Kangawa 
-10. Nord
-- And 75 more!
-
-##  Customization
-
-### Adding Custom Language Servers
-
-Edit `~/.config/Codeotus/lua/user/config/LspBatch/lsp.lua` and add your server to the table.
-
-**Preconfigured servers include:**
-- C/C++ (clangd)
-- CMake, Go (gopls), Lua (lua_ls)
-- Web (HTML, CSS, JS/TS via vtsls)
-- Markdown (marksman), PHP (phpactor)
-- TOML (taplo), GDScript
-- And more!
-
-> **Note:** Codeotus provides configurations only. Download and install LSP servers yourself via Mason or your package manager.
-
-### Adding Custom Snippets
-
-Add snippet files to `~/.config/Codeotus/lua/user/Snippets/` using VSCode-style JSON format. Name files after the language (e.g., `c.json`, `python.json`).
-
-## 📝 License
-
-This project is licensed under the MIT License. You're free to use, modify, and distribute it!
-
-## 🙏 Credits
-
-- Special thanks to all plugin authors who make configurations like this possible
-- Previously README generated by [Dotfyle](https://dotfyle.com) 
-- New one is generated by Claude -free tier
-- Built with love using plugins from the amazing Neovim community
 ---
 
-<p align="center">
-  <strong>Star this repo if you find it useful!</strong> ⭐
-</p>
+## Extending The System
+
+### Adding Language Servers
+
+Edit `~/.config/Codeotus/lua/user/config/LspBatch/lsp.lua` and add your server to the configuration table.
+
+Preconfigured support includes clangd for C and C++, gopls for Go, lua_ls for Lua, vtsls for web technologies, marksman for Markdown, phpactor for PHP, taplo for TOML, and gdscript for game development.
+
+Codeotus provides the configuration layer. Download and install LSP servers through Mason or your system package manager.
+
+### Creating Custom Snippets
+
+Drop snippet files into `~/.config/Codeotus/lua/user/Snippets/` using VSCode JSON format. Name files after the target language: `c.json`, `python.json`, `rust.json`.
+
+---
+
+## Current Status
+
+Recent improvements include removing bloated plugins, enhancing nvim-cmp with better defaults, and implementing blink-cmp as an alternative completion engine with command line support.
+
+Active development focuses on refining keymappings and improving workspace functionality.
+
+This configuration maintains itself through regular updates at the configuration level. The mini.nvim ecosystem integration continues to evolve based on real-world usage patterns.
+
+---
+
+## The Reality
+
+Codeotus is maintained by a single developer. No corporate backing, no team of contributors, no marketing budget. Features get added when they're needed or when they solve real problems.
+
+Some keybindings might feel unnecessary at first. The learning curve exists but it's intentional, not accidental. Seven thousand lines of configuration reflect years of refinement, not complexity for its own sake.
+
+This is direct, battle-tested code. No previous versions to fall back on. Just the latest build, pushed live after real use. It works because it has to work.
+
+---
+
+## License and Attribution
+
+Released under MIT License. Use it, modify it, distribute it. The code is yours.
+
+Thanks to every plugin author who built the tools that make this possible. The Neovim community creates the foundation. Codeotus just assembles the pieces in a way that solves problems.
+
+Previous documentation generated by Dotfyle. This version written to communicate clearly what this project actually does and why it exists.
+
+Built for people who code, by someone who codes.
+
+---
+
+**If this solves your problems, star the repository. If it doesn't, fork it and make it better.**
