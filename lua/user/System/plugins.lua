@@ -127,6 +127,7 @@ require("lazy").setup({
         { "kdheepak/lazygit.nvim" },                              -- NOTE: Let it be free of version lock.
         { "echasnovski/mini.nvim",               version = "*" }, --NOTE: Let it be free of vetsion lock.
         { "nvzone/showkeys" },
+        { "folke/flash.nvim",                    event = "VeryLazy",                     version = "v2.1.0" },
 
         -- =========================
         -- File Search

@@ -98,6 +98,7 @@ safe_require("user.config.IdeBatch.surround")
 safe_require("user.config.IdeBatch.arrow")
 safe_require("user.config.IdeBatch.comments")
 safe_require("user.config.IdeBatch.lazygit")
+safe_require("user.config.IdeBatch.flash")
 
 safe_require("user.config.IdeBatch.oil")
 safe_require("user.config.LspBatch.luasnip")
