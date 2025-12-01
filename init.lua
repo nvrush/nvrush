@@ -67,6 +67,7 @@ safe_require("user.Mini.mini_surround")
 safe_require("user.Mini.mini_notify")
 safe_require("user.Mini.mini_icons")
 safe_require("user.Mini.mini_animate")
+safe_require("user.Mini.mini_jump")
 
 
 -- ============= ============= ============= =============
@@ -100,6 +101,9 @@ safe_require("user.config.IdeBatch.arrow")
 safe_require("user.config.IdeBatch.comments")
 safe_require("user.config.IdeBatch.lazygit")
 safe_require("user.config.IdeBatch.flash")
+safe_require("user.config.IdeBatch.undotree")
+safe_require("user.config.IdeBatch.yanky")
+
 
 safe_require("user.config.IdeBatch.oil")
 safe_require("user.config.LspBatch.luasnip")
@@ -160,4 +164,4 @@ vim.g.gruvbox_material_transparent_background = 0 -- set to 1 for transparent
 -- Load the colorscheme at last !
 -- NOTE: SGT colorsheme_name will override
 -- ============= ============= ============= ============= =============
-vim.cmd.colorscheme("onedarker")
+vim.cmd.colorscheme("gruvbox")

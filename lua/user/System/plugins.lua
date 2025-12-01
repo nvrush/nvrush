@@ -104,9 +104,9 @@ require("lazy").setup({
         { "folke/trouble.nvim",                  branch = "main",                        version = "v3.7.1" },
         { "folke/todo-comments.nvim",            version = "v1.5.0" },
         { "ThePrimeagen/refactoring.nvim", },
-        { "mfussenegger/nvim-dap",               version = "0.10.0" }, -- WARN: without v
-        { "onsails/lspkind-nvim" },                                    --FIX: Give a working copy
-        { "SmiteshP/nvim-navic",                 lazy = true },        --FIX: Give a working copy
+        { "mfussenegger/nvim-dap",               version = "0.10.0" },
+        { "onsails/lspkind-nvim" },
+        { "SmiteshP/nvim-navic",                 lazy = true },
 
         { "saghen/blink.cmp",                    version = "v1.8.0" },
 
@@ -114,19 +114,21 @@ require("lazy").setup({
         -- Sessions & projects
         -- =========================
         { "stevearc/resession.nvim",             version = "v1.2.1" },
-        { "ahmedkhalf/project.nvim" }, --FIX: Give a copy.
+        { "ahmedkhalf/project.nvim" },
 
         -- =========================
         -- Daily usefull
         -- =========================
         { "folke/which-key.nvim",                event = "VeryLazy",                     version = "v3.17.0" },
-        { "karb94/neoscroll.nvim",               config = true,                          version = "0.2.0" }, -- WARN: without v
+        { "karb94/neoscroll.nvim",               config = true,                          version = "0.2.0" },
         { "mg979/vim-visual-multi",              branch = "master",                      version = "v0.5.8" },
         { "numToStr/Comment.nvim",               version = "v0.8.0" },
-        { "kdheepak/lazygit.nvim" },                              -- NOTE: Let it be free of version lock.
-        { "echasnovski/mini.nvim",               version = "*" }, --NOTE: Let it be free of vetsion lock.
+        { "kdheepak/lazygit.nvim" },
+        { "echasnovski/mini.nvim",               version = "*" },
         { "nvzone/showkeys" },
         { "folke/flash.nvim",                    event = "VeryLazy",                     version = "v2.1.0" },
+        { "mbbill/undotree" },
+        { "gbprod/yanky.nvim" },
 
         -- =========================
         -- File Search

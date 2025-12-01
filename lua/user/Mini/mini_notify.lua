@@ -17,9 +17,9 @@ mini_notify.setup({
     window = {
         config = {
             border = "rounded",
-            anchor = "NE",
+            anchor = "NW",
             row = 1,
-            col = vim.o.columns,
+            col = 0,
             focusable = false,
             zindex = 100,
             style = "minimal",
