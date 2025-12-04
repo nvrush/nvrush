@@ -1,44 +1,42 @@
-local wk = require("which-key")
-
--- Modern, theme-aware setup with fancy UI
-wk.setup({
+require("which-key").setup({
     preset = "modern",
     delay = 300,
     triggers_blacklist = {
         n = { '"' },
     },
-    -- Fancy window configuration
+
+    -- Beautiful window configuration
     win = {
         border = "rounded",
-        padding = { 0, 0 },
+        padding = { 1, 2 }, -- Slightly more padding for better readability
         title = true,
         title_pos = "center",
         zindex = 1000,
 
-        -- Modern styling
+        -- Modern styling with subtle transparency
         wo = {
-            winblend = 10, -- Slight transparency for modern look
+            winblend = 15, -- Subtle transparency
         },
     },
 
-    -- Layout configuration
+    -- Optimized layout
     layout = {
         width = { min = 20, max = 50 },
-        spacing = 3,
+        spacing = 4, -- More breathing room
         align = "left",
     },
 
-    -- Enhanced icons
+    -- Premium icons with visual hierarchy
     icons = {
         breadcrumb = "»",
         separator = "➜",
         group = "+",
         ellipsis = "…",
 
-        -- Fancy mappings with better icons
         mappings = true,
         rules = {},
         colors = true,
+
         keys = {
             Up = " ",
             Down = " ",
@@ -53,40 +51,34 @@ wk.setup({
             ScrollWheelDown = "󱕐 ",
             ScrollWheelUp = "󱕑 ",
             NL = "󰌑 ",
-            BS = "󰁮",
+            BS = "󰁮 ",
             Space = "󱁐 ",
             Tab = "󰌒 ",
-            F1 = "󱊫",
-            F2 = "󱊬",
-            F3 = "󱊭",
-            F4 = "󱊮",
-            F5 = "󱊯",
-            F6 = "󱊰",
-            F7 = "󱊱",
-            F8 = "󱊲",
-            F9 = "󱊳",
-            F10 = "󱊴",
-            F11 = "󱊵",
-            F12 = "󱊶",
+            F1 = "󱊫 ",
+            F2 = "󱊬 ",
+            F3 = "󱊭 ",
+            F4 = "󱊮 ",
+            F5 = "󱊯 ",
+            F6 = "󱊰 ",
+            F7 = "󱊱 ",
+            F8 = "󱊲 ",
+            F9 = "󱊳 ",
+            F10 = "󱊴 ",
+            F11 = "󱊵 ",
+            F12 = "󱊶 ",
         },
     },
 
-    -- Show help and command preview
     show_help = true,
     show_keys = true,
 
-    -- Disable for certain filetypes
     disable = {
         ft = {},
         bt = {},
     },
-
-    -- Enhanced documentation
-    -- triggers = {
-    --   { "<auto>", mode = "nixsotc" },
-    --   { "<leader>", mode = { "n", "v" } },
-    -- },
 })
+
+
 
 -- ============================================
 -- Which-Key Configuration
@@ -135,10 +127,8 @@ wk.add({
 
     -- Commands
     { "<leader>c",    group = "Commands" },
-    { "<leader>cs",   "<Cmd>wa<CR>",                             desc = "Save All" },
-    { "<leader>cS",   "<Cmd>wall<CR>",                           desc = "Force Save All" },
-    { "<leader>cq",   "<Cmd>wa<CR>",                             desc = "Save All" },
-    { "<leader>cQ",   "<Cmd>wall<CR>",                           desc = "Force Save All" },
+    { "<leader>ca",   "<Cmd>wa<CR>",                             desc = "Save All" },
+    { "<leader>cq",   "<Cmd>wall<CR>",                           desc = "Force Save All" },
 
     -- File Operations
     { "<leader>cf",   group = "File" },
@@ -338,10 +328,10 @@ wk.add({
     -- Save
     -- ===============
     { "<leader>w",    group = "Save" },
-    { "<leader>ws",   "<cmd>w<cr>",                              desc = "Save" },
-    { "<leader>wa",   "<cmd>wall<cr>",                           desc = "Save all" },
-    { "<leader>wq",   "<cmd>q<cr>",                              desc = "Quit" },
-    { "<leader>we",   "<cmd>qall<cr>",                           desc = "Quit" },
+    { "<leader>ws",   "<cmd>w<cr>",                              desc = "Just Save" },
+    { "<leader>wa",   "<cmd>wall<cr>",                           desc = "Just Save all" },
+    { "<leader>wq",   "<cmd>q<cr>",                              desc = "Formal Quit" },
+    { "<leader>we",   "<cmd>qall<cr>",                           desc = "Force Quit" },
     -- ===============
     -- Yank
     -- ===============

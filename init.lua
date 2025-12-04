@@ -61,7 +61,7 @@ safe_require("user.UI.notify")
 safe_require("user.UI.ascii")
 
 -- ============= ============= ============= =============
--- 6. Mini Ecosystem
+-- 3. Mini Ecosystem
 -- ============= ============= ============= =============
 safe_require("user.Mini.mini_surround")
 safe_require("user.Mini.mini_notify")
@@ -71,17 +71,55 @@ safe_require("user.Mini.mini_jump")
 
 
 -- ============= ============= ============= =============
--- 3. BATCH PLUGIN CORE
+-- 4. LspConfig Setup
 -- ============= ============= ============= =============
 
+-- HighLevel
+safe_require("user.config.LspConfig.HighLevel.lua_ls")
+safe_require("user.config.LspConfig.HighLevel.pyright")
+
+-- LowLevel
+safe_require("user.config.LspConfig.LowLevel.asm")
+safe_require("user.config.LspConfig.LowLevel.clang")
+safe_require("user.config.LspConfig.LowLevel.cmake")
+safe_require("user.config.LspConfig.LowLevel.rust_analyzer")
+safe_require("user.config.LspConfig.LowLevel.zls")
+
+-- Productive
+safe_require("user.config.LspConfig.Productive.bash_ls")
+safe_require("user.config.LspConfig.Productive.marksman")
+safe_require("user.config.LspConfig.Productive.vimls")
+
+-- Utilities
+safe_require("user.config.LspConfig.Utilities.dockerls")
+safe_require("user.config.LspConfig.Utilities.jsonls")
+safe_require("user.config.LspConfig.Utilities.yamlls")
+
+-- Web
+safe_require("user.config.LspConfig.Web.css_ls")
+safe_require("user.config.LspConfig.Web.gopls")
+safe_require("user.config.LspConfig.Web.html")
+safe_require("user.config.LspConfig.Web.phpactor")
+safe_require("user.config.LspConfig.Web.vtsls")
+
+-- Activate Them all --
 safe_require("user.config.LspBatch.lsp")
--- NOTE: WHILE WORKING WITH BLINK : Make sure to comment this & uncomment below ones:
+-- ============= ============= ============= =============
+-- 5. LspBatch Setup
+-- ============= ============= ============= =============
 
 -- safe_require("user.config.LspBatch.cmp") -- Comment this for blink completion
 safe_require("user.config.LspBatch.cmd_cmp")  -- Comment this if using nvim completion
 safe_require("user.config.LspBatch.blinkCmp") -- Comment this if using nvim completion
 safe_require("user.config.LspBatch.autopairs")
 safe_require("user.config.LspBatch.formatter")
+safe_require("user.config.LspBatch.luasnip")
+safe_require("user.config.LspBatch.lspkind")
+safe_require("user.config.LspBatch.navic")
+
+-- ============= ============= ============= =============
+-- 5. LspBatch Setup
+-- ============= ============= ============= =============
 
 safe_require("user.config.IdeBatch.nvimtree")
 safe_require("user.config.IdeBatch.telescope")
@@ -104,12 +142,7 @@ safe_require("user.config.IdeBatch.lazygit")
 safe_require("user.config.IdeBatch.flash")
 safe_require("user.config.IdeBatch.undotree")
 safe_require("user.config.IdeBatch.yanky")
-
-
 safe_require("user.config.IdeBatch.oil")
-safe_require("user.config.LspBatch.luasnip")
-safe_require("user.config.LspBatch.lspkind")
-safe_require("user.config.LspBatch.navic")
 
 -- ============= ============= ============= =============
 -- 4. PluginExtensionConfiguration
@@ -121,48 +154,13 @@ safe_require("user.PluginExtensionConfiguration.overseer")
 -- 6. Custom Cmp
 -- ============= ============= ============= =============
 
--- NOTE: Please uncomment this only when working on Gdscript !
 -- NOTE: IS CURRENTLY IN NON-PRODUCTION READY BUT WORKING STATE !
 
 -- safe_require("user.CustomCmp.cmp-gd")
 
 
 -- ============= ============= ============= ============= =============
--- Don't uncommemt until the above ones behave different
--- ============= ============= ============= ============= =============
-
--- safe_require("user.UI.dressing")
--- safe_require("user.UI.windows")
--- safe_require("user.UI.snacks")
--- safe_require("user.UI.bold_text")
--- safe_require("user.Overridder.Caller")
--- safe_require("user.Overridder.gruvbox_ts")
--- safe_require("user.UI.theme")
--- safe_require("user.UI.colors")
--- safe_require("user.UI.SetGlobalTheme")
-
--- ============= ============= ============= ============= =============
--- Colorscheme Calls Only
--- ============= ============= ============= ============= =============
-
--- NOTE: This IDE is built to hardly support gruvbox but other themes do work well
--- Define colorscheme settings here !
-
--- Comment this if you don't like
--- Gruv Box Material only
-vim.g.gruvbox_material_background = "hard"     -- options: soft | medium | hard
-vim.g.gruvbox_material_foreground = "material" -- options: material | mix | original
-vim.g.gruvbox_material_enable_bold = 1
-vim.g.gruvbox_material_enable_italic = 1
-vim.g.gruvbox_material_ui_contrast = "low"        -- options: low | high
-vim.g.gruvbox_material_transparent_background = 0 -- set to 1 for transparent
-
-
-
-
---
--- ============= ============= ============= ============= =============
 -- Load the colorscheme at last !
--- NOTE: SGT colorsheme_name will override
 -- ============= ============= ============= ============= =============
+-- NOTE: SGT colorsheme_name will override
 vim.cmd.colorscheme("gruvbox")

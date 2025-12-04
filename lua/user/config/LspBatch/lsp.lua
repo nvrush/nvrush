@@ -64,79 +64,78 @@ local default_config = {
 -- ===============================
 local servers = {
     -- Core
-    bashls            = { cmd = { "bash-language-server", "start" }, filetypes = { "sh", "bash" } },
-    jsonls            = { cmd = { "vscode-json-language-server", "--stdio" }, filetypes = { "json" } },
-    yamlls            = { cmd = { "yaml-language-server", "--stdio" }, filetypes = { "yaml", "yml" } },
-    dockerls          = { cmd = { "docker-langserver", "--stdio" }, filetypes = { "dockerfile" } },
-    marksman          = { cmd = { "marksman", "server" }, filetypes = { "markdown" } },
-
-    -- Web
-    html              = { cmd = { "vscode-html-language-server", "--stdio" }, filetypes = { "html" } },
-    cssls             = { cmd = { "vscode-css-language-server", "--stdio" }, filetypes = { "css", "scss", "less" } },
+    -- bashls   = { cmd = { "bash-language-server", "start" }, filetypes = { "sh", "bash" } },
+    -- yamlls   = { cmd = { "yaml-language-server", "--stdio" }, filetypes = { "yaml", "yml" } },
+    -- dockerls = { cmd = { "docker-langserver", "--stdio" }, filetypes = { "dockerfile" } },
+    -- marksman = { cmd = { "marksman", "server" }, filetypes = { "markdown" } },
+    --
+    -- -- Web
+    -- html     = { cmd = { "vscode-html-language-server", "--stdio" }, filetypes = { "html" } },
+    -- cssls    = { cmd = { "vscode-css-language-server", "--stdio" }, filetypes = { "css", "scss", "less" } },
     --    tsserver      = { cmd = { "typescript-language-server", "--stdio" }, filetypes = { "javascript", "typescript" },},
     --    eslint        = { cmd = { "vscode-eslint-language-server", "--stdio" }, filetypes = { "javascript", }},
     --    biome = { cmd = { "biome", "lsp-proxy" }, filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "json", "jsonc" },},
-    vtsls             = {
-        cmd = { "vtsls", "--stdio" },
-        filetypes = {
-            "javascript",
-            "javascriptreact",
-            "typescript",
-            "typescriptreact",
-        },
-        -- This makes it work for ANY JS/TS file, even standalone ones
-        settings = {
-            vtsls = {
-                autoUseWorkspaceTsdk = true,
-                experimental = {
-                    completion = {
-                        enableServerSideFuzzyMatch = true,
-                    },
-                },
-            },
-            typescript = {
-                updateImportsOnFileMove = { enabled = "always" },
-                suggest = {
-                    completeFunctionCalls = true,
-                },
-                inlayHints = {
-                    parameterNames = { enabled = "literals" },
-                    parameterTypes = { enabled = true },
-                    variableTypes = { enabled = true },
-                    propertyDeclarationTypes = { enabled = true },
-                    functionLikeReturnTypes = { enabled = true },
-                    enumMemberValues = { enabled = true },
-                },
-            },
-            javascript = {
-                updateImportsOnFileMove = { enabled = "always" },
-                suggest = {
-                    completeFunctionCalls = true,
-                },
-                inlayHints = {
-                    parameterNames = { enabled = "literals" },
-                    parameterTypes = { enabled = true },
-                    variableTypes = { enabled = true },
-                    propertyDeclarationTypes = { enabled = true },
-                    functionLikeReturnTypes = { enabled = true },
-                    enumMemberValues = { enabled = true },
-                },
-            },
-        },
-        flags = {
-            allow_incremental_sync = true,
-            debounce_text_changes = 50,
-        },
-    },
-
-    -- System
-    clangd            = { cmd = { "clangd", "--background-index" }, filetypes = { "c", "cpp" } },
-    asm_lsp           = { cmd = { "asm-lsp" }, filetypes = { "asm", "s" } },
-    cmake             = { cmd = { "cmake-language-server" }, filetypes = { "cmake" } },
-    vimls             = { cmd = { "vim-language-server", "--stdio" }, filetypes = { "vim" } },
+    -- vtsls    = {
+    --     cmd = { "vtsls", "--stdio" },
+    --     filetypes = {
+    --         "javascript",
+    --         "javascriptreact",
+    --         "typescript",
+    --         "typescriptreact",
+    --     },
+    --     -- This makes it work for ANY JS/TS file, even standalone ones
+    --     settings = {
+    --         vtsls = {
+    --             autoUseWorkspaceTsdk = true,
+    --             experimental = {
+    --                 completion = {
+    --                     enableServerSideFuzzyMatch = true,
+    --                 },
+    --             },
+    --         },
+    --         typescript = {
+    --             updateImportsOnFileMove = { enabled = "always" },
+    --             suggest = {
+    --                 completeFunctionCalls = true,
+    --             },
+    --             inlayHints = {
+    --                 parameterNames = { enabled = "literals" },
+    --                 parameterTypes = { enabled = true },
+    --                 variableTypes = { enabled = true },
+    --                 propertyDeclarationTypes = { enabled = true },
+    --                 functionLikeReturnTypes = { enabled = true },
+    --                 enumMemberValues = { enabled = true },
+    --             },
+    --         },
+    --         javascript = {
+    --             updateImportsOnFileMove = { enabled = "always" },
+    --             suggest = {
+    --                 completeFunctionCalls = true,
+    --             },
+    --             inlayHints = {
+    --                 parameterNames = { enabled = "literals" },
+    --                 parameterTypes = { enabled = true },
+    --                 variableTypes = { enabled = true },
+    --                 propertyDeclarationTypes = { enabled = true },
+    --                 functionLikeReturnTypes = { enabled = true },
+    --                 enumMemberValues = { enabled = true },
+    --             },
+    --         },
+    --     },
+    --     flags = {
+    --         allow_incremental_sync = true,
+    --         debounce_text_changes = 50,
+    --     },
+    -- },
+    --
+    -- -- System
+    -- clangd   = { cmd = { "clangd", "--background-index" }, filetypes = { "c", "cpp" } },
+    -- asm_lsp  = { cmd = { "asm-lsp" }, filetypes = { "asm", "s" } },
+    -- cmake    = { cmd = { "cmake-language-server" }, filetypes = { "cmake" } },
+    -- vimls    = { cmd = { "vim-language-server", "--stdio" }, filetypes = { "vim" } },
 
     -- Scripting
-    pyright           = { cmd = { "pyright-langserver", "--stdio" }, filetypes = { "python" } },
+    -- pyright  = { cmd = { "pyright-langserver", "--stdio" }, filetypes = { "python" } },
 
     --  lua_ls        = {
     --      cmd = { "lua-language-server" },
@@ -156,113 +155,169 @@ local servers = {
     --          },
     --      },
     --  },
-    lua_ls            = {
-        cmd = { "lua-language-server" },
-        filetypes = { "lua" },
-        handlers = {
-            ["$/progress"] = function() end,
-        },
-        settings = {
-            Lua = {
-                runtime = {
-                    version = "Lua 5.4",
-                },
-                diagnostics = {
-                    globals = { "vim" },
-                },
-                workspace = {
-                    checkThirdParty = false,
-                    library = { vim.env.VIMRUNTIME .. "/lua" },
-                    -- reduces workspace scanning massively
-                    maxPreload = 2000,
-                    preloadFileSize = 500,
-                },
-                telemetry = { enable = false },
-            },
-        },
-    },
-
-    -- Extra Chad Power
-    rust_analyzer     = { cmd = { "rust-analyzer" }, filetypes = { "rust" } },
-
-    ['rust-analyzer'] = {
-        cargo = {
-            allFeatures = true,
-            loadOutDirsFromCheck = true,
-            buildScripts = {
-                enable = true,
-            },
-        },
-        -- Add clippy lints for Rust
-        checkOnSave = {
-            allFeatures = true,
-            command = "clippy",
-            extraArgs = { "--no-deps" },
-        },
-        procMacro = {
-            enable = true,
-            ignored = {
-                ["async-trait"] = { "async_trait" },
-                ["napi-derive"] = { "napi" },
-                ["async-recursion"] = { "async_recursion" },
-            },
-        },
-    },
+    -- lua_ls   = {
+    --     cmd = { "lua-language-server" },
+    --     filetypes = { "lua" },
+    --     handlers = {
+    --         ["$/progress"] = function() end,
+    --     },
+    --     settings = {
+    --         Lua = {
+    --             runtime = {
+    --                 version = "Lua 5.4",
+    --             },
+    --             diagnostics = {
+    --                 globals = { "vim" },
+    --             },
+    --             workspace = {
+    --                 checkThirdParty = false,
+    --                 library = { vim.env.VIMRUNTIME .. "/lua" },
+    --                 -- reduces workspace scanning massively
+    --                 maxPreload = 2000,
+    --                 preloadFileSize = 500,
+    --             },
+    --             telemetry = { enable = false },
+    --         },
+    --     },
+    -- },
+    --
+    -- -- ===============================================
+    -- Rust language-server protocol
+    -- ===============================================
 
 
-    -- Golang Lsp
-    gopls    = {
-        cmd = { "gopls" },
-        filetypes = { "go", "gomod", "gowork", "gotmpl" },
-        settings = {
-            gopls = {
-                -- PERFORMANCE: Critical settings
-                analyses = {
-                    unusedparams = true,
-                    shadow = false, -- Disable expensive analysis
-                    unusedwrite = false,
-                    useany = false,
-                },
+    -- rust_analyzer     = { cmd = { "rust-analyzer" }, filetypes = { "rust" } },
 
-                -- Reduce completion load
-                completeUnimported = true,
-                completionBudget = "100ms", -- Cap completion time
+    -- ['rust-analyzer'] = {
+    --     cargo = {
+    --         allFeatures = true,
+    --         loadOutDirsFromCheck = true,
+    --         buildScripts = {
+    --             enable = true,
+    --         },
+    --     },
+    --     -- Add clippy lints for Rust
+    --     checkOnSave = {
+    --         allFeatures = true,
+    --         command = "clippy",
+    --         extraArgs = { "--no-deps" },
+    --     },
+    --     procMacro = {
+    --         enable = true,
+    --         ignored = {
+    --             ["async-trait"] = { "async_trait" },
+    --             ["napi-derive"] = { "napi" },
+    --             ["async-recursion"] = { "async_recursion" },
+    --         },
+    --     },
+    -- },
 
-                -- Matcher settings
-                matcher = "Fuzzy",
-                deepCompletion = false, -- CRITICAL: Disable deep search
+    -- -- In your Neovim config (init.lua or rust-analyzer setup)
+    -- require('lspconfig').rust_analyzer.setup({
+    --     settings = {
+    --         ['rust-analyzer'] = {
+    --             -- Disable some heavy features
+    --             checkOnSave = {
+    --                 command = "clippy",
+    --                 extraArgs = { "--no-deps" } -- Don't check dependencies
+    --             },
+    --
+    --             -- Faster cargo check
+    --             cargo = {
+    --                 allFeatures = false,
+    --                 buildScripts = {
+    --                     enable = false -- Disable build script evaluation
+    --                 }
+    --             },
+    --
+    --             -- Reduce background analysis
+    --             diagnostics = {
+    --                 enable = true,
+    --                 disabled = { "unresolved-proc-macro" },
+    --                 enableExperimental = false
+    --             },
+    --
+    --             -- Limit proc macro expansion
+    --             procMacro = {
+    --                 enable = true,
+    --                 ignored = {
+    --                     ["async-trait"] = { "async_trait" },
+    --                     ["napi-derive"] = { "napi" },
+    --                 }
+    --             },
+    --
+    --             -- Disable inlay hints (resource heavy)
+    --             inlayHints = {
+    --                 enable = false
+    --             },
+    --
+    --             -- Limit completion items
+    --             completion = {
+    --                 limit = 50
+    --             }
+    --         }
+    --     }
+    -- }),
+    --
+    -- ===============================================
+    -- Golang language-server protocol
+    -- ===============================================
 
-                -- Reduce semantic token load
-                semanticTokens = false,
 
-                -- Hints (disable if still slow)
-                hints = {
-                    assignVariableTypes = false,
-                    compositeLiteralFields = false,
-                    compositeLiteralTypes = false,
-                    constantValues = false,
-                    functionTypeParameters = false,
-                    parameterNames = false,
-                    rangeVariableTypes = false,
-                },
 
-                -- Staticcheck can be slow
-                staticcheck = false,
-
-                -- Codelens overhead
-                codelenses = {
-                    generate = false,
-                    gc_details = false,
-                    test = false,
-                    tidy = false,
-                },
-            },
-        },
-    },
-    phpactor = { cmd = { "phpactor", "language-server" }, filetypes = { "php" } },
-    zls      = { cmd = { "zls" }, filetypes = { "zig" } },
-
-    -- ===============================
+    -- -- Golang Lsp
+    -- gopls    = {
+    --     cmd = { "gopls" },
+    --     filetypes = { "go", "gomod", "gowork", "gotmpl" },
+    --     settings = {
+    --         gopls = {
+    --             -- PERFORMANCE: Critical settings
+    --             analyses = {
+    --                 unusedparams = true,
+    --                 shadow = false, -- Disable expensive analysis
+    --                 unusedwrite = false,
+    --                 useany = false,
+    --             },
+    --
+    --             -- Reduce completion load
+    --             completeUnimported = true,
+    --             completionBudget = "100ms", -- Cap completion time
+    --
+    --             -- Matcher settings
+    --             matcher = "Fuzzy",
+    --             deepCompletion = false, -- CRITICAL: Disable deep search
+    --
+    --             -- Reduce semantic token load
+    --             semanticTokens = false,
+    --
+    --             -- Hints (disable if still slow)
+    --             hints = {
+    --                 assignVariableTypes = false,
+    --                 compositeLiteralFields = false,
+    --                 compositeLiteralTypes = false,
+    --                 constantValues = false,
+    --                 functionTypeParameters = false,
+    --                 parameterNames = false,
+    --                 rangeVariableTypes = false,
+    --             },
+    --
+    --             -- Staticcheck can be slow
+    --             staticcheck = false,
+    --
+    --             -- Codelens overhead
+    --             codelenses = {
+    --                 generate = false,
+    --                 gc_details = false,
+    --                 test = false,
+    --                 tidy = false,
+    --             },
+    --         },
+    --     },
+    -- },
+    -- phpactor = { cmd = { "phpactor", "language-server" }, filetypes = { "php" } },
+    -- zls      = { cmd = { "zls" }, filetypes = { "zig" } },
+    --
+    -- -- ===============================
     -- NOTE: Better to write your configs behind this Note!
     -- Plese Do add comma (,) after your configuration !
     -- Don't damage configuration if they are working !
