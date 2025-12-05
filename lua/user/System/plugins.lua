@@ -128,6 +128,8 @@ require("lazy").setup({
         { "folke/flash.nvim",                    event = "VeryLazy",                     version = "v2.1.0" },
         { "mbbill/undotree" },
         { "gbprod/yanky.nvim" },
+        { "Pocco81/auto-save.nvim", },
+        { "CRAG666/code_runner.nvim" },
 
         -- =========================
         -- File Search

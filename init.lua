@@ -125,6 +125,8 @@ safe_require("user.config.LspBatch.navic")
 -- 5. LspBatch Setup
 -- ============= ============= ============= =============
 
+safe_require("user.config.IdeBatch.auto_save")
+safe_require("user.config.IdeBatch.code_runner_on_click")
 safe_require("user.config.IdeBatch.nvimtree")
 safe_require("user.config.IdeBatch.telescope")
 safe_require("user.config.IdeBatch.toggleterm")
