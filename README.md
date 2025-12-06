@@ -77,7 +77,7 @@ rm -rf ~/.config/Codeotus/ ~/.local/share/Codeotus/
 - Auto-save toggleable with leader as & Auto-formatting & snippets 
 - Clean statusline & bufferline
 - Almost major Features an Ide can have.
-
+- Better diagonostics and less noise.
 **Space is your leader. Everything flows from there.**
 
 ---
